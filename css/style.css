@@ -7,9 +7,9 @@ body {
 }
 
 .main {
-    margin-left: 18%;
-    margin-right: 18%;
-    padding-top: 60px;
+    margin-left: 22%;
+    margin-right: 22%;
+    padding-top: 9%;
 }
 
 h1 {
@@ -107,4 +107,18 @@ h1 {
     opacity: 100%;
 }
 
+@media only screen and (max-width: 425px) {
+    .main {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-top: 9%;
+    }
 
+    .block {
+        font-size: 14px;
+    }
+
+    .degree, .block i {
+        font-size: 16px;
+    }
+}
