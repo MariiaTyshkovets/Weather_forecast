@@ -43,7 +43,7 @@ h1 {
     vertical-align: top;
 }
 
-img {
+.block img {
     display: inline-block;
     height: 30px;
 }
