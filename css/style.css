@@ -8,29 +8,30 @@ body {
 
 .main {
     margin: 0 22%;
-    padding-top: 8%;
+    padding-top: 10vh;
 }
 
 h1 {
     font-size: 30px;
     padding-left: 30px;
+    margin-bottom: 10px;
 }
 
 .container {
-    border: 2px solid white;
+    border: 4px solid white;
     font-size: 0px;
     background-color: white;
     height: 400px;
+    display: grid;
+    grid-template-areas: 'first first second third' 'fourth fifth sixth seventh' 'eighth nineth nineth tenth' 'eleventh eleventh eleventh eleventh';
+    gap: 4px;
 }
 
 .block {
     cursor: pointer;
-    display: inline-block;
-    height: 25%;
     font-size: 20px;
     text-align: center;
     padding-top: 14px;
-    border: 2px solid white;
     transition: all .1s ease-in;
 }
 
@@ -48,60 +49,59 @@ h1 {
     height: 30px;
 }
 
-.block-25 {
-    width: 25%;
-}
-
-.block-50 {
-    width: 50%;
-}
-
-.block-100 {
-    width: 100%;
-}
-
 .first {
     background-color: #3399CC;
+    grid-area: first;
 }
 
 .second {
     background-color: #33CCCC;
+    grid-area: second;
 }
 
 .third {
     background-color: #996699;
+    grid-area: third;
 }
 
 .fourth {
-    background-color: #C24747;
+    background-color: #c83a3a;
+    grid-area: fourth;
 }
 
 .fifth {
-    background-color: #E2674A;
+    background-color: #e49347;
+    grid-area: fifth;
 }
 
 .sixth {
-    background-color: #FFCC66;
+    background-color: #f1e720;
+    grid-area: sixth;
 }
 
 .seventh {
-    background-color: #99CC99;
+    background-color: #5bd15b;
+    grid-area: seventh;
 }
 
 .eighth {
     background-color: #669999;
+    grid-area: eighth;
 }
 
 .nineth {
     background-color: #CC6699;
+    grid-area: nineth;
 }
 
 .tenth {
     background-color: #339966;
+    grid-area: tenth;
 }
 
 .eleventh {
     background-color: #666699;
+    grid-area: eleventh;
 }
 
 .container .block {
@@ -116,18 +116,93 @@ h1 {
     opacity: 100%;
 }
 
+.add-info {
+    position: absolute;
+    height: 397px;
+    top: 19.5vh;
+    left: 22.5%;
+    right: 22.5%;
+    padding: 40px;
+    background-color: white;
+    color: black;
+    line-height: 1.5;
+}
+
+.blur {
+    filter:blur(5px)
+}
+
+h2 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.info p {
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    border: 2px solid #2B81AC;
+    background-color: #3399CC;
+    border-radius: 3px;
+}
+
+.close:hover {
+    background-color: #2B81AC;
+}
+
+.none {
+    display: none;
+}
+
+.add-info {
+    animation: appearance 2s ease;
+}
+  
+@keyframes appearance {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .add-info {
+        left: 64px;
+        right: 64px;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     .main {
         margin-left: 10px;
         margin-right: 10px;
-        padding-top: 9%;
+    }
+
+    .add-info {
+        left: 24px;
+        right: 24px;
     }
 
     .block {
         font-size: 14px;
     }
 
-    .degree, .block i {
+    .degree {
         font-size: 16px;
     }
 }
