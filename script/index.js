@@ -14,7 +14,7 @@ for (let i = 0; i < block.length; i++) {
         degree.innerHTML = `${Math.round(cityinfo.main.temp)} &#8451`;
         const img = collection[3];
         let weatherIcon = cityinfo.weather[0].icon;
-        img.src = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+        img.src = `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
     })
     .catch((error) => {
         degree.innerHTML = `The service is not available`;
