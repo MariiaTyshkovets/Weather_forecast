@@ -129,7 +129,7 @@ h1 {
 }
 
 .blur {
-    filter:blur(5px)
+    filter:blur(5px);
 }
 
 h2 {
@@ -168,10 +168,10 @@ h2 {
   
 @keyframes appearance {
     0% {
-        height: 0;
+        opacity: 0.1;
     }
     100% {
-        height: 400px;
+        opacity: 1;
     }
 }
 
